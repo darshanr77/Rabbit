@@ -43,7 +43,7 @@ const Navbar = () => {
           <Link to='/cart'>
            <button className="relative cursor-pointer hover:text-black">
                <HiShoppingBag className="text-xl  h-6 w-6 text-gray-700 hover:text-black" />
-               <span className="absolute top-[-3px] right-[-2px] bg-[#ea2e2e] text-white text-xs rounded-full px-[3px] py-[0.5px]">4</span>
+               <span className="absolute top-[-3px] right-[-2px] bg-[#ea2e2e] text-white text-xs rounded-full px-[3px] py-[0.5px]">3</span>
            </button>
           </Link>
             <button className="relative cursor-pointer hover:text-black">
