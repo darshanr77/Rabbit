@@ -14,15 +14,22 @@ const App = () => {
           <Route path='/cart' element={<Cart /> } />
         
        </Routes>
-         <ToastContainer 
-          position="top-center"   // ✅ This is the key
-          autoClose={1300}        
-          hideProgressBar={false}
-          newestOnTop
-          closeOnClick
-          pauseOnHover
-          draggable
-          theme="light" />
+        <ToastContainer
+  position="top-center"
+  autoClose={1300}
+  hideProgressBar={true}
+  closeButton={false}
+  newestOnTop
+  closeOnClick
+  pauseOnHover
+  draggable={false}
+  theme="light"
+  toastClassName={() =>
+    "text-gray-900 text-center font-medium bg-white px-6 py-3 rounded-lg shadow-md"
+  }
+/>
+
+
     </BrowserRouter>
     
   )

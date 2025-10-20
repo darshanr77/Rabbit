@@ -2,16 +2,24 @@ import React, { useState } from "react";
 import {toast} from "react-toastify";
 import { HiShoppingBag, HiUser, HiSearch } from "react-icons/hi";
 import {Link} from 'react-router-dom'
+import { TbLogout, TbLogout2 } from "react-icons/tb";
 
 const Navbar = () => {
 
     const[toastCount,setToastCount] = useState(0);
 
-    const handleToastCount = () =>{
-        if(toastCount < 5){
+    const handleToastCountHome = () =>{
+        if(toastCount < 2){
             toast("You are in Homepage");
             setToastCount(prev => prev+1);
         }
+    };
+
+    const handleToastCountLogout = () => {
+      if(toastCount < 1){
+        toast("Logged out");
+        setToastCount(prev => prev+1);
+      }
     };
 
   return (
@@ -19,7 +27,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         
         {/* Left: Logo */}
-        <div onClick={handleToastCount} className="text-xl font-bold text-black">
+        <div onClick={handleToastCountHome} className="text-xl font-bold text-black">
           <Link  to='/'>
             Rabbit
           </Link>
@@ -35,6 +43,11 @@ const Navbar = () => {
 
         {/* Right: Icons */}
         <div className="flex items-center space-x-4 text-gray-700">
+          <Link onClick={handleToastCountLogout}>
+            <button className="relative cursor-pointer hover:text-black">
+                <TbLogout className="text-xl h-6 w-6 text-gray-700  hover:text-black" />
+            </button>
+          </Link>
           <Link to='/profile'>
             <button className="relative cursor-pointer hover:text-black">
                 <HiUser className="text-xl h-6 w-6 text-gray-700  hover:text-black" />
@@ -43,7 +56,7 @@ const Navbar = () => {
           <Link to='/cart'>
            <button className="relative cursor-pointer hover:text-black">
                <HiShoppingBag className="text-xl  h-6 w-6 text-gray-700 hover:text-black" />
-               <span className="absolute top-[-3px] right-[-2px] bg-[#ea2e2e] text-white text-xs rounded-full px-[3px] py-[0.5px]">3</span>
+               <span className="absolute top-[-3px] right-[-2px] bg-[#ea2e2e] text-white text-xs rounded-full px-[3px] py-[0.5px]">4</span>
            </button>
           </Link>
             <button className="relative cursor-pointer hover:text-black">
