@@ -1,25 +1,32 @@
 import React, { useState } from "react";
 import {toast} from "react-toastify";
-import { HiShoppingBag, HiUser, HiSearch } from "react-icons/hi";
+import { HiShoppingBag, HiUser } from "react-icons/hi";
 import {Link} from 'react-router-dom'
 import { TbLogout } from "react-icons/tb";
 import Searchbar from "./Searchbar";
-import { HiMagnifyingGlass } from "react-icons/hi2";
+import Cart from "./Cart";
 
 const Navbar = () => {
 
     const[toastCount,setToastCount] = useState(0);
 
+     const [cartOpen,setCartOpen] = useState(false);
+
+        const toggleCart = () => {
+            setCartOpen(!cartOpen);
+        }
+
+
     const handleToastCountHome = () =>{
         if(toastCount < 2){
-            toast("You are in Homepage");
+            toast.success("You are in Homepage");
             setToastCount(prev => prev+1);
         }
     };
 
     const handleToastCountLogout = () => {
       if(toastCount < 1){
-        toast("Logged out");
+        toast.success("Logged out");
         setToastCount(prev => prev+1);
       }
     };
@@ -55,8 +62,8 @@ const Navbar = () => {
                 <HiUser className="text-xl h-6 w-6 text-gray-700  hover:text-black" />
             </button>
           </Link>
-          <Link to='/cart'>
-           <button className="relative cursor-pointer hover:text-black">
+          <Link >
+           <button onClick={toggleCart} className="relative cursor-pointer hover:text-black">
                <HiShoppingBag className="text-xl  h-6 w-6 text-gray-700 hover:text-black" />
                <span className="absolute top-[-3px] right-[-2px] bg-[#ea2e2e] text-white text-xs rounded-full px-[3px] py-[0.5px]">4</span>
            </button>
@@ -69,6 +76,9 @@ const Navbar = () => {
             <Searchbar />
         </div>
       </div>
+
+      {/* Cart Items */}
+      <Cart cartOpen={cartOpen} toggleCart={toggleCart}  />
     </div>
   );
 };

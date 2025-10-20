@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import UserLayout from './components/layout/UserLayout'
 import {ToastContainer} from 'react-toastify'
 import Profile from './pages/Profile'
-import Cart from './pages/Cart'
 
 const App = () => {
   return (
@@ -11,13 +10,12 @@ const App = () => {
        <Routes>
           <Route path='/' element={<UserLayout />} />
           <Route path='/profile' element={<Profile /> } />
-          <Route path='/cart' element={<Cart /> } />
         
        </Routes>
         <ToastContainer
   position="top-center"
-  autoClose={1300}
-  hideProgressBar={true}
+  autoClose={1500}
+  hideProgressBar
   closeButton={false}
   newestOnTop
   closeOnClick
@@ -25,9 +23,10 @@ const App = () => {
   draggable={false}
   theme="light"
   toastClassName={() =>
-    "text-gray-900 text-center font-medium bg-white px-6 py-3 rounded-lg shadow-md"
+    "flex items-center justify-start bg-[#ffffff] gap-2 px-6 py-3 text-gray-800 rounded-lg shadow-md"
   }
 />
+
 
 
     </BrowserRouter>
