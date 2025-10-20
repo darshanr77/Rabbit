@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import {toast} from "react-toastify";
 import { HiShoppingBag, HiUser, HiSearch } from "react-icons/hi";
 import {Link} from 'react-router-dom'
-import { TbLogout, TbLogout2 } from "react-icons/tb";
+import { TbLogout } from "react-icons/tb";
+import Searchbar from "./Searchbar";
+import { HiMagnifyingGlass } from "react-icons/hi2";
 
 const Navbar = () => {
 
@@ -59,9 +61,12 @@ const Navbar = () => {
                <span className="absolute top-[-3px] right-[-2px] bg-[#ea2e2e] text-white text-xs rounded-full px-[3px] py-[0.5px]">4</span>
            </button>
           </Link>
-            <button className="relative cursor-pointer hover:text-black">
-                <HiSearch className="text-xl h-6 w-6 text-gray-700  hover:text-black" />
-            </button>
+
+          {/* Search bar */}
+            {/* <button className="relative cursor-pointer hover:text-black">
+                <HiMagnifyingGlass className="text-xl h-6 w-6 text-gray-700  hover:text-black" />
+            </button> */}
+            <Searchbar />
         </div>
       </div>
     </div>
