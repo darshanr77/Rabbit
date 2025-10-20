@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { HiMagnifyingGlass, HiMiniXMark } from 'react-icons/hi2';
+import { RiSearchLine } from 'react-icons/ri';
 
 
 const Searchbar = () => {
@@ -46,17 +47,17 @@ const Searchbar = () => {
               onClick={handleSearchbar}
               className="absolute right-3 top-[9px] text-gray-800 hover:text-black transition"
             >
-              <HiMiniXMark onClick={() => setIsOpen(false)} className='cursor-pointer' size={23} />
+              <HiMiniXMark onClick={() => setIsOpen(false)} className='cursor-pointer' size={25} />
             </button>
           </div>
         </form>
       ) : (
         <button
           onClick={handleSearchbar}
-          className="p-2 rounded-full cursor-pointer hover:bg-gray-300 transition shadow-sm"
+          className="p-2 rounded-full cursor-pointer  transition shadow-sm"
           aria-label="Open search"
         >
-          <HiMagnifyingGlass size={22} />
+          <RiSearchLine className='mb-1' size={25} />
         </button>
       )}
     </div>

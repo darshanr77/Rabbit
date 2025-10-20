@@ -13,19 +13,16 @@ const App = () => {
         
        </Routes>
         <ToastContainer
-  position="top-center"
-  autoClose={1500}
-  hideProgressBar
-  closeButton={false}
-  newestOnTop
-  closeOnClick
-  pauseOnHover
-  draggable={false}
-  theme="light"
-  toastClassName={() =>
-    "flex items-center justify-start bg-[#ffffff] gap-2 px-6 py-3 text-gray-800 rounded-lg shadow-md"
-  }
-/>
+          position="top-center"
+          autoClose={1500}
+          hideProgressBar
+          closeButton={false}
+          newestOnTop
+          closeOnClick
+          pauseOnHover
+          draggable={false}
+          theme="light"
+          toastClassName={() => "flex items-center justify-start bg-[#ffffff] gap-2 px-6 py-3 text-gray-800 rounded-lg shadow-md" } />
 
 
 

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import {toast} from "react-toastify";
-import { HiShoppingBag, HiUser } from "react-icons/hi";
+import { HiShoppingBag, HiUser, HiUserCircle } from "react-icons/hi";
 import {Link} from 'react-router-dom'
 import { TbLogout } from "react-icons/tb";
 import Searchbar from "./Searchbar";
 import Cart from "./Cart";
+import { HiUsers } from "react-icons/hi2";
+import { RiShoppingBag2Line, RiShoppingBag3Line, RiShoppingBag4Line, RiUser3Line, RiUser4Fill, RiUser4Line } from "react-icons/ri";
 
 const Navbar = () => {
 
@@ -54,17 +56,17 @@ const Navbar = () => {
         <div className="flex items-center space-x-4 text-gray-700">
           <Link onClick={handleToastCountLogout}>
             <button className="relative cursor-pointer hover:text-black">
-                <TbLogout className="text-xl h-6 w-6 text-gray-700  hover:text-black" />
+                <TbLogout size={30} className="text-xl h-6 w-6 text-gray-700  hover:text-black" />
             </button>
           </Link>
           <Link to='/profile'>
             <button className="relative cursor-pointer hover:text-black">
-                <HiUser className="text-xl h-6 w-6 text-gray-700  hover:text-black" />
+                <RiUser3Line size={30} className="text-xl h-6 w-6 text-gray-700  hover:text-black" />
             </button>
           </Link>
           <Link >
            <button onClick={toggleCart} className="relative cursor-pointer hover:text-black">
-               <HiShoppingBag className="text-xl  h-6 w-6 text-gray-700 hover:text-black" />
+               <RiShoppingBag4Line size={30} className="text-xl  h-6 w-6 text-gray-700 hover:text-black" />
                <span className="absolute top-[-3px] right-[-2px] bg-[#ea2e2e] text-white text-xs rounded-full px-[3px] py-[0.5px]">4</span>
            </button>
           </Link>
