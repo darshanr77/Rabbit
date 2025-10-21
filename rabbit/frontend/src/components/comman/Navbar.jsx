@@ -43,11 +43,15 @@ const Navbar = () => {
           onClick={handleToastCountHome}
           className="text-2xl font-bold font-mono text-black"
         >
-          <Link to="/">Rabbit</Link>
+          <Link to="/">
+            <span className="bg-gradient-to-r from-red-400 to-red-600 text-white px-2 py-1 rounded">
+                Rabbit
+            </span>
+          </Link>
         </div>
 
         {/* Center: Navigation Links */}
-        <div className="hidden md:flex space-x-8 text-sm font-medium text-gray-700 uppercase">
+        <div className="hidden md:flex space-x-8 text-[0.850rem] font-medium text-gray-700 uppercase">
           <a href="#" className="hover:text-black">
             Men
           </a>
@@ -60,7 +64,7 @@ const Navbar = () => {
           <a href="#" className="hover:text-black">
             Bottom Wear
           </a>
-          <a href="/image.png" className="hover:text-black" download="custom-filename.png">
+          <a href="/image.png" className="hover:text-black" download="filename.png">
             Lion Image
           </a>
 
