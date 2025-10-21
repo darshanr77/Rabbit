@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { TbLogout } from "react-icons/tb";
 import Searchbar from "./Searchbar";
 import Cart from "./Cart";
-import { HiBars3BottomRight, HiOutlineUser } from "react-icons/hi2";
-import { RiShoppingBag4Line } from "react-icons/ri";
+import { HiBars3BottomRight } from "react-icons/hi2";
+import { RiShoppingBag4Line, RiUser3Line} from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
@@ -60,6 +60,10 @@ const Navbar = () => {
           <a href="#" className="hover:text-black">
             Bottom Wear
           </a>
+          <a href="/image.png" className="hover:text-black" download="custom-filename.png">
+            Lion Image
+          </a>
+
         </div>
 
         {/* Right: Icons */}
@@ -75,9 +79,9 @@ const Navbar = () => {
 
           <Link to="/profile">
             <button className="relative cursor-pointer hover:text-black">
-              <HiOutlineUser
-                size={34}
-                className="text-xl font-bold h-6 w-6 text-[#121212eb] hover:text-black"
+              <RiUser3Line
+                size={30}
+                className="text-xl font-bold h-6 w-6 text-gray-700 hover:text-black"
               />
             </button>
           </Link>
