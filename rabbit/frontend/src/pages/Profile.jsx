@@ -3,7 +3,7 @@ import React from 'react'
 const Profile = () => {
   return (
     <div>
-      fgh
+      this is Profile section
     </div>
   )
 }
