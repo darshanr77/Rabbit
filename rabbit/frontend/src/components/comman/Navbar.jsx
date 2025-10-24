@@ -50,7 +50,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Center: Navigation Links */}
+        {/* Center: Navigation Link */}
         <div className="hidden md:flex space-x-8 text-[0.850rem] font-medium text-gray-700 uppercase">
           <a href="#" className="hover:text-black">
             Men
