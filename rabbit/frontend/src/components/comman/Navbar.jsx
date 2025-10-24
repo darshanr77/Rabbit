@@ -136,16 +136,19 @@ const Navbar = () => {
 
   {/* Mobile Nav Links */}
   <div className="flex flex-col items-start space-y-6 p-6 text-lg font-medium text-gray-800 uppercase">
-    <button onClick={toggleNavMobile} className="hover:text-black">
+    <button className="text-2xl text-black font-bold cursor-pointer">
+      Menu
+    </button>
+    <button onClick={toggleNavMobile} className="hover:text-black cursor-pointer">
       Men
     </button>
-    <button onClick={toggleNavMobile} className="hover:text-black">
+    <button onClick={toggleNavMobile} className="hover:text-black cursor-pointer">
       Women
     </button>
-    <button onClick={toggleNavMobile} className="hover:text-black">
+    <button onClick={toggleNavMobile} className="hover:text-black cursor-pointer">
       Top Wear
     </button>
-    <button onClick={toggleNavMobile} className="hover:text-black">
+    <button onClick={toggleNavMobile} className="hover:text-black cursor-pointer">
       Bottom Wear
     </button>
   </div>
