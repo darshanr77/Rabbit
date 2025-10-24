@@ -36,7 +36,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white shadow-md">
+    <div className="bg-white shadow-md z-0">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         {/* Left: Logo */}
         <div
@@ -44,7 +44,7 @@ const Navbar = () => {
           className="text-2xl font-bold font-mono text-black"
         >
           <Link to="/">
-            <span className="bg-gradient-to-r from-red-400 to-red-600 text-white px-2 py-1 rounded">
+            <span className="bg-gradient-to-r from-orange-400 to-pink-500 text-white px-2 py-1 rounded">
                 Rabbit
             </span>
           </Link>
